@@ -73,6 +73,7 @@ A previously-populated Customer class can have named fields copied to another in
 
 Heterogeneous (different types) class copy
 
+<code>
 @NamedClass(name = "Customer")
 public class Customer {
 
@@ -103,6 +104,7 @@ public class Person {
 
     @NamedField(name = "Properties")
     private List<Address> residences = new ArrayList<>();
+</code>
 
 In this example, all of the fields having the same "NamedField" name will be copied.  Notice "Properties" and
 "HomeAddress" have an Address type but will not be copied because of differing field names.
