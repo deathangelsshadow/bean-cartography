@@ -42,6 +42,11 @@ the SAME RUN.  If two like "NamedClass" annotations are found they are assumed t
 If a field needs to be converted to a different type or formatted differently, a Formatter should be created and associated
 to a field by name.
 
+Since the target (i.e. new) object map drives this process, if there are null objects in the target they will
+be skipped -- even if the source has them.  Conversely, if the target has an object that the source does not (null)
+then no fields will be changed on the target.
+
+
 ### Class-to-Class
 
 #### Homogeneous (same type) class copy
@@ -114,8 +119,8 @@ the following rules when copying fields:
 
 ### Collections, Maps, and Arrays
 
+The source and targets must at least match on general 'type'.  i.e. both must be maps, collections, or arrays.
 
-
-
-
+The business names for the map or collection filds also must be the same although their contained objects don't have to 
+match.  
 
