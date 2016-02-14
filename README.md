@@ -107,6 +107,7 @@ be lifted in a future version of this application.
 #### Composite Classes
 Composite classes are those classes containing a NamedClassComposite annotation.  This tells the Cartographer to use
 the following rules when copying fields:
+
 1. Use matching named fields from the source class that match the "NamedClass" annotation on the target class.
 1. If a composite class is named and it exists in source use its named field matches.
 1. For the remaining named fields scan all source objects for a name match and if found use it (first match.)
