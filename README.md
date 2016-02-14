@@ -131,16 +131,21 @@ the following rules when copying fields:
 1. If a composite class is named and it exists in source use its named field matches.
 1. For the remaining named fields scan all source objects for a name match and if found use it (first match.)
 
+Example:
+
     @NamedClass(name = "Order")
     @NamedClassComposite(names = {"Person", "Item"})
     public class Order {
 
 ### Collections, Maps, and Arrays
-
 Use the appropriate constructor of Cartographer to turn on the processing of collections.  This will have the effect
 of instantiating the elements in the target (one for each in the source.)  
 
 The business names for the map or collection fields must be the same although their contained objects don't have to 
 match.  Their types must also match (i.e. both must be maps, collections, or arrays.)
   
+## Contact
+You can contact the author regarding questions, concerns, feature requests, becomming a contributor, etc. at 
+mcsnavely@gmail.com
+
 
